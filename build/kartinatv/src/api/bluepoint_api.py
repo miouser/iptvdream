@@ -3,9 +3,9 @@
 #  Copyright (c) 2010 Alex Maystrenko <alexeytech@gmail.com>
 #  web: http://techhost.dlinkddns.com/
 #
-#########################################################################
-####  								BluePointTV created by Snake										###
-#########################################################################
+###################################################################
+###		BluePointTV created by Snake			###
+###################################################################
 
 from abstract_api import MODE_STREAM, AbstractAPI, AbstractStream
 import cookielib, urllib, urllib2 #TODO: optimize imports
