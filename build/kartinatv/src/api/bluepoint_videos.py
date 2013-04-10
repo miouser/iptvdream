@@ -7,9 +7,9 @@
 # the terms of the GNU General Public License as published by the Free
 # Software Foundation; either version 2, or (at your option) any later
 # version.
-#########################################################################
-####  								BluePointTV created by Snake										###
-#########################################################################
+###########################################################
+###		BluePointTV created by Snake		###
+###########################################################
 
 from abstract_api import MODE_VIDEOS
 from bluepoint_api import BluePointAPI, JsonWrapper
