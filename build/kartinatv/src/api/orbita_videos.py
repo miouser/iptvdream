@@ -45,7 +45,6 @@ class Ktv(OrbitaAPI):
 				  "genre" : genre_arg }
 		if stype == 'text':
 			params['query'] = query
-		#root = self.getData("/api/json/vod_list?"+urllib.urlencode(params), "getting video list by type %s" % stype)
 		root = self.getData("/api/json/vod_list.php?"+urllib.urlencode(params), "getting video list by type %s" % stype)
 		videos_count = int(root.findtext('total'))
 		
@@ -59,9 +58,6 @@ class Ktv(OrbitaAPI):
 			video.descr = unescapeEntities(v.findtext('description')).encode('utf-8')
 			video.image = v.findtext('poster')
 			video.year = v.findtext('year').encode('utf-8')
-#			video.rate_imdb = floatConvert(v.findtext('rate_imdb'))
-#			video.rate_kinopoisk = floatConvert(v.findtext('rate_kinopoisk'))
-#			video.rate_mpaa = v.findtext('rate_mpaa')
 			video.country = v.findtext('country').encode('utf-8')
 			video.genre = v.findtext('genre_str').encode('utf-8')
 			self.videos[vid] = video				
@@ -72,15 +68,11 @@ class Ktv(OrbitaAPI):
 		root = self.getData("/api/json/vod_info.php?"+urllib.urlencode(params), "getting video info %s" % vid)
 		v = root.find('film')
 		name = v.findtext('name').encode('utf-8')
-		video = Video(name)
-		
+		video = Video(name)		
 #		video.name_orig = v.findtext('name_orig').encode('utf-8')
 		video.descr = unescapeEntities(v.findtext('description')).encode('utf-8')
 		video.image = v.findtext('poster')
 		video.year = v.findtext('year').encode('utf-8')
-#		video.rate_imdb = floatConvert(v.findtext('rate_imdb'))
-#		video.rate_kinopoisk = floatConvert(v.findtext('rate_kinopoisk'))
-#		video.rate_mpaa = v.findtext('rate_mpaa')
 		video.country = v.find('country').findtext('name').encode('utf-8')
 		video.genre = v.findtext('genre_str').encode('utf-8')
 #		video.length = v.findtext('length') and int(v.findtext('length'))
