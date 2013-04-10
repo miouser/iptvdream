@@ -2,6 +2,9 @@
 #
 #  Copyright (c) 2010 Alex Maystrenko <alexeytech@gmail.com>
 #  web: http://techhost.dlinkddns.com/
+###########################################################
+###		 created by Snake			###
+###########################################################
 
 from newrus_api import NewrusAPI, Ktv as NewrusKtv
 
