@@ -7,7 +7,7 @@ from newrus_api import NewrusAPI, Ktv as NewrusKtv
 
 class OrbitaAPI(NewrusAPI):
 	
-	iProvider = "orbita"
+	iProvider = "Orbita"
 	site = "http://iptv.orb-media.com"
 
 class Ktv(NewrusKtv, OrbitaAPI):
