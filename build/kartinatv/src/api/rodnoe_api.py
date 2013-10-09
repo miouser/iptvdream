@@ -170,15 +170,21 @@ class Ktv(RodnoeAPI, AbstractStream):
 			if prog and prog.findtext('begin') and prog.findtext('title'):
 				title = prog.findtext('title').encode('utf-8') + '\n'
 				title += prog.findtext('info').encode('utf-8')
-				t_start = datetime.fromtimestamp(int(prog.findtext('begin').encode('utf-8')))
-				t_end = datetime.fromtimestamp(int(prog.findtext('end').encode('utf-8')))
+				try:
+					t_start = datetime.fromtimestamp(int(prog.findtext('begin').encode('utf-8')))
+					t_end = datetime.fromtimestamp(int(prog.findtext('end').encode('utf-8')))
+				except ValueError:
+					pass
 				self.channels[id].epg = EpgEntry(title, t_start, t_end)
 			prog = channel.find('next')
 			if prog and prog.findtext('begin') and prog.findtext('title'):
 				title = prog.findtext('title').encode('utf-8') + '\n'
 				title += prog.findtext('info').encode('utf-8')
-				t_start = datetime.fromtimestamp(int(prog.findtext('begin').encode('utf-8')))
-				t_end = datetime.fromtimestamp(int(prog.findtext('end').encode('utf-8')))
+				try:
+					t_start = datetime.fromtimestamp(int(prog.findtext('begin').encode('utf-8')))
+					t_end = datetime.fromtimestamp(int(prog.findtext('end').encode('utf-8')))
+				except ValueError:
+					pass
 				self.channels[id].epg = EpgEntry(title, t_start, t_end)
 			else:
 				self.channels[id].lastUpdateFailed = True
