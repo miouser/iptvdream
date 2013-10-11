@@ -1,0 +1,16 @@
+<default>
+	  <prerequisites>
+                    <tag type="Software"/>
+	  </prerequisites>
+          <info>
+                    <author>technic</author>
+                    <name>iptvDream</name>
+                    <packagename>enigma2-plugin-extensions-iptvdream</packagename>
+                    <shortdescription>Plugin to watch many IPTV services on enigma2 box</shortdescription>
+                    <license>GNU GPLv2</license>
+          </info>
+
+	  <files type="package"> <!-- without version, without .ipk -->
+		<file type="package" name="enigma2-plugin-extensions-iptvdream" />
+	  </files>
+</default>

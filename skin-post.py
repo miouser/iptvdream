@@ -36,7 +36,7 @@ search(root.find('skin'))
 if len(sys.argv) > 2:
     outfile = sys.argv[2]
 else:
-    outfile = 'kartina_skin.xml'
+    outfile = 'iptvdream_skin.xml'
     from os.path import exists
     if exists(outfile):
         from shutil import copy

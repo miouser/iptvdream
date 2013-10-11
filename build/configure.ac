@@ -1,4 +1,4 @@
-AC_INIT([enigma2-plugin-extensions-kartinatv],[1.7.0])
+AC_INIT([enigma2-plugin-extensions-iptvdream],[1.7.0])
 AM_INIT_AUTOMAKE([dist-bzip2 foreign no-define tar-pax])
 AC_CONFIG_HEADERS([enigma2-plugins-config.h])
 
@@ -55,15 +55,15 @@ CXXFLAGS="$CXXFLAGS $DEBUG_CFLAGS -Wall $ENIGMA2_CFLAGS $PTHREAD_CFLAGS $GSTREAM
 AC_CONFIG_FILES([
 Makefile
 
-kartinatv/Makefile
-kartinatv/po/Makefile
-kartinatv/src/Makefile
-kartinatv/src/servicets/Makefile
-kartinatv/src/api/Makefile
-kartinatv/skin/Makefile
-kartinatv/skin/menu/Makefile
-kartinatv/skin/buttons/Makefile
-kartinatv/skin/sd/Makefile
-kartinatv/meta/Makefile
+iptvdream/Makefile
+iptvdream/po/Makefile
+iptvdream/src/Makefile
+iptvdream/src/servicets/Makefile
+iptvdream/src/api/Makefile
+iptvdream/skin/Makefile
+iptvdream/skin/menu/Makefile
+iptvdream/skin/buttons/Makefile
+iptvdream/skin/sd/Makefile
+iptvdream/meta/Makefile
 ])
 AC_OUTPUT
